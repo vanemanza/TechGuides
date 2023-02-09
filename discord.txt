@@ -1,0 +1,11 @@
+# https://comoinstalar.info/discord-en-linux/#:~:text=El%20siguiente%20paso%20en%20el,descargas%20con%20el%20comando%20cd%20.&text=Una%20vez%20en%20~%2FDescargas,Discord%20Deb%20en%20el%20sistema.
+
+Ir al sitio y descargar el archivo
+
+sudo apt update
+sudo apt upgrade -y
+
+cd ~/Descargas ó --> sudo dpkg -i discord-*.deb
+
+corregir errores --> sudo apt install -f
+
