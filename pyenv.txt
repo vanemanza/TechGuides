@@ -1,0 +1,19 @@
+# https://github.com/pyenv/pyenv#installation
+
+instalador automatico 
+curl https://pyenv.run | bash
+
+comandos:
+instalar versiones adicionales --> pyenv install <version>
+lista de versiones disponibles --> pyenv install -l
+cambiar de version --> pyenv global <version>
+
+ejemplo:
+pyenv install 3.10
+pyenv global 3.10
+
+desinstalar una version:
+pyenv uninstall <version>
+
+otras versiones 
+pyenv commands (--help)
