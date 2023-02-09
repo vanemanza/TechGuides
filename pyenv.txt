@@ -1,4 +1,3 @@
-# https://github.com/pyenv/pyenv#installation
 # https://github.com/pyenv/pyenv
 
 instalador automatico 
