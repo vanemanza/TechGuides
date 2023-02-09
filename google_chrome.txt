@@ -1,0 +1,18 @@
+# basado en https://es.wikihow.com/instalar-Google-Chrome-desde-la-Terminal-en-Linux
+
+sudo apt update
+supo apt upgrade
+
+verificar si tenes instalado wget con wget --version
+si no esta --> sudo apt install wget
+
+descargar el paquete de chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+instalar el paquete
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+solucionar posibles errores
+sudo apt-get install -f
+
+abrir con google-chrome + enter
