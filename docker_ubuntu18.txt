@@ -1,0 +1,24 @@
+# https://www.hostinger.com.ar/tutoriales/como-instalar-y-usar-docker-en-ubuntu
+
+sudo apt update
+sudo apt upgrade -y
+
+requisitos previos:
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common
+
+agregar los repositorios de docker:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+actualizar el repo:
+sudo apt update
+
+verificar la instalacion:
+apt-cache policy docker-ce
+
+instalar docker:
+sudo apt install docker-ce
+
+comprobar el estdo de docker:
+sudo systemctl status docker
+
