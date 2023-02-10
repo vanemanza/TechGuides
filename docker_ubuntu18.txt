@@ -1,4 +1,4 @@
-# https://www.hostinger.com.ar/tutoriales/como-instalar-y-usar-docker-en-ubuntu
+Según https://www.hostinger.com.ar/tutoriales/como-instalar-y-usar-docker-en-ubuntu
 
 sudo apt update
 sudo apt upgrade -y
@@ -21,4 +21,30 @@ sudo apt install docker-ce
 
 comprobar el estdo de docker:
 sudo systemctl status docker
+
+-----------------------------------------------------------------------------------------------------------------------
+
+con ChatGPT:
+
+Para Ubuntu 18 y Python3.10.10
+1. Actualizar los paquetes
+sudo apt-get update
+
+2. Instalar las dependencias
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+3. Agregar la clave GPG del repositorio de Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+4. Agregar el repo a las fuentes apt
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+5. Actualizar de nuevo
+sudo apt-get update
+
+6. Instalar Docker-CE
+sudo apt-get install docker-ce
+
+7. verificar
+sudo docker run hello-world
 
