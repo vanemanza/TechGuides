@@ -20,6 +20,9 @@ pyenv commands (--help)
 
 * Si quiero instalar un entorno virtual con --->  pyenv virtualenv <nombre y version o nada>
 consultar los entornos creados ---> pyenv virtualenvs
+activarlo ---> pyenv activate <nombre>
+consultar la versin de python ---> pyenv which python
+
 
 
 si me sale el mensaje q pyenv no se encuentra en el path seguir estos pasos:
