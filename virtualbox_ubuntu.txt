@@ -1,0 +1,14 @@
+https://www.virtualbox.org/wiki/Linux_Downloads
+
+1) seleccionar la version de Ubuntu y descargar el archivo
+2) para ditros basadas en debian:
+  - Add the following line to your /etc/apt/sources.list. For Debian 11 and older, replace '<mydist>' with 'bullseye', 'buster', or 'stretch'. 
+  For Ubuntu 22.04 and older, 'replace '<mydist>' with 'jammy', 'eoan', 'bionic', 'xenial',
+  - para verificar la ditribucion ---> lsb_release -a
+  - en mi caso x jammy:
+  deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian <mydist> contrib
+  - downloading and registering The Oracle public key for verifying the signatures:
+  wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
+  - instalar:
+  sudo apt-get update
+  sudo apt-get install virtualbox-6.1
