@@ -1,0 +1,28 @@
+1. verificar si estan los paquetes necesarios para compilar postgres
+sudo apt-get install libpq-dev python-dev
+
+2. instalar psycopg2 para interactuar con python
+pip install psycopg2-binary
+
+3. instalar el servidor 
+sudo apt-get install postgresql postgresql-contrib
+
+-----------------------------------------------------------------------------------------------------------
+## crear una db y un usuario con permisos para acceder
+## conectarse a la db desde el proyecto:
+import psycopg2
+
+conn = psycopg2.connect(
+    database="nombre_de_la_base_de_datos",
+    user="nombre_de_usuario",
+    password="contraseña",
+    host="localhost",
+    port="5432"
+)
+
+cur = conn.cursor()
+
+# Ejecute aquí sus consultas SQL
+
+cur.close()
+conn.close()
