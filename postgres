@@ -1,3 +1,6 @@
+## verificar si Postgres está instalado
+dpkg -l | grep postgresql
+
 1. verificar si estan los paquetes necesarios para compilar postgres
 sudo apt-get install libpq-dev python-dev
 
@@ -26,3 +29,22 @@ cur = conn.cursor()
 
 cur.close()
 conn.close()
+
+-----------------------------------------------------------------------------------------------------------
+## verificar usuario (rol) con el que intento conectarme al servidor
+whoami
+
+## verificar que el servidor esté en ejecución:
+- sudo systemctl status postgresql
+- sudo service postgresql status ( si no tengo instalado systemd)
+
+## iniciar el servidor 
+- sudo systemctl start postgresql
+- sudo service postgresql start (si no tengo instalado systemd)
+
+## ver los registros de postgres 
+- /var/log/postgresql/
+
+
+
+
