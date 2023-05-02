@@ -12,6 +12,19 @@ sudo apt-get install postgresql postgresql-contrib
 
 -----------------------------------------------------------------------------------------------------------
 ## crear una db y un usuario con permisos para acceder
+-CREATE DATABASE db_prueba;
+-CREATE USER user1 WITH ENCRYPTED PASSWORD 'psw123';
+-GRANT ALL PRIVILEGES ON DATABASE db_prueba TO user1;
+-ALTER USER user1 WITH CREATEDB;
+
+## conectarse desde la consola:
+psql -U postgres (-h localhost -p 5432)
+* dentro de la consola:
+postgres=# 
+- listar las bd:\l
+- ver los usuarios:\du
+- salir: \q
+
 ## conectarse a la db desde el proyecto:
 import psycopg2
 
