@@ -1,4 +1,5 @@
 # https://github.com/pyenv/pyenv
+# https://pypi.org/project/pyenv-win/#pyenv
 
 instalador automatico 
 curl https://pyenv.run | bash
@@ -40,3 +41,34 @@ Si no existe el archivo "/.bash_profile", verificar si existe el archivo "/.prof
 eval "$(pyenv virtualenv-init -)"
 
 Reiniciar la terminal o cerrar y volver a abrirla para que los cambios tengan efecto.
+
+Usage
+To view a list of python versions supported by pyenv windows: pyenv install -l
+To filter the list: pyenv install -l | findstr 3.8
+To install a python version: pyenv install 3.5.2
+Note: An install wizard may pop up for some non-silent installs. You'll need to click through the wizard during installation. There's no need to change any options in it. or you can use -q for quiet installation
+You can also install multiple versions in one command too: pyenv install 2.4.3 3.6.8
+To set a python version as the global version: pyenv global 3.5.2
+This is the version of python that will be used by default if a local version (see below) isn't set.
+Note: The version must first be installed.
+To set a python version as the local version: pyenv local 3.5.2.
+The version given will be used whenever python is called from within this folder. This is different than a virtual env, which needs to be explicitly activated.
+Note: The version must first be installed.
+After (un)installing any libraries using pip or modifying the files in a version's folder, you must run pyenv rehash to update pyenv with new shims for the python and libraries' executables.
+Note: This must be run outside of the .pyenv folder.
+To uninstall a python version: pyenv uninstall 3.5.2
+To view which python you are using and its path: pyenv version
+To view all the python versions installed on this system: pyenv versions
+Update the list of discoverable Python versions using: pyenv update command for pyenv-win 2.64.x and 2.32.x versions
+How to update pyenv
+If installed via pip
+Add your pyenv-win installation path to easy_install.pth file located in site-packages. This should make pip recognise pyenv-win as installed.
+Get updates via pip pip install --upgrade pyenv-win
+If installed via Git
+Go to %USERPROFILE%\.pyenv\pyenv-win (which is your installed path) and run git pull
+If installed via zip
+Download the latest zip and extract it
+Go to %USERPROFILE%\.pyenv\pyenv-win and replace the folders libexec and bin with the new ones you just downloaded
+If installed via the installer
+Run the following in a Powershell terminal: &"${env:PYENV_HOME}\install-pyenv-win.ps1"
+
